@@ -7,37 +7,62 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <header></header>
+  <header class="bg-zinc-200 shadow-lg p-3 flex flex-row gap-10 mb-5">
+    <button class="transition-all duration-[.6s] bg-zinc-500 p-2 rounded text-zinc-100 font-semibold hover:bg-zinc-700 hover:shadow-lg">Money do breads</button>
+    <button class="transition-all duration-[.6s] bg-zinc-500 p-2 rounded text-zinc-100 font-semibold hover:bg-zinc-700 hover:shadow-lg">Breads to money</button>
+  </header>
   
   <main>
     <h1>Bread Money Return Calculator</h1>
     <div id="divisor" />
 
-    <section id="config">
+    <section id="config-section">
       <h1>Config:</h1>
       <label for="bread-cost">Price p/bread</label>
-      <input type="number" min="0.01" step="0.01" required placeholder="1 bread cost..." id="bread-cost">
+      <input type="number" min="0.01" step="0.01" required placeholder="1 bread cost..." id="bread-cost" value="0.45">
     </section>
 
-    <section id="form">
+    <section id="form-section-money-to-breads">
       <h1>Form:</h1>
-      <form>
+      <form id="form">
         <label for="money">Money</label>
         <input type="number" min="0.01" step="0.01" required placeholder="Money..." id="money">
 
         <button type="submit">Calculate</button>
       </form>
+
+      <section id="results-section">
+        <h1>Results:</h1>
+        <h2 id="how-many-breads-can-be-bought">How many breads can buy:</h2>
+        <h2 id="money-returned">Money returned:</h2>
+      </section>
     </section>
 
-    <section id="results">
-      <h1>Results:</h1>
-      <h2>How many breads can buy:</h2>
-      <h2>Money returned:</h2>
+    <section class="hidden" id="form-section-breads-to-money">
+      <h1>Form:</h1>
+      <form id="form">
+        <label for="breads">Breads:</label>
+        <input type="number" min="1" step="1" required placeholder="breads..." id="breads">
+        
+        <label for="money">Money:</label>
+        <input type="number" min="0.01" step="0.01" required placeholder="money..." id="money">
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <section id="results-section">
+        <h1>Results:</h1>
+        <h2 id="how-much-it-will-cost">How much it costs:</h2>
+        <h2 id="money-returned">Money returned:</h2>
+      </section>
     </section>
+
   </main>
 
   <footer>
     &copy; Legal
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
