@@ -4,65 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bread Return Calculator</title>
+  <link rel="shortcut icon" href="imgs/icon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="bg-zinc-200 shadow-lg p-3 flex flex-row gap-10 mb-5">
-    <button class="transition-all duration-[.6s] bg-zinc-500 p-2 rounded text-zinc-100 font-semibold hover:bg-zinc-700 hover:shadow-lg">Money do breads</button>
-    <button class="transition-all duration-[.6s] bg-zinc-500 p-2 rounded text-zinc-100 font-semibold hover:bg-zinc-700 hover:shadow-lg">Breads to money</button>
+<body class="dark:bg-gray-800 dark:text-white">
+  <header class="p-4">
+    
   </header>
   
-  <main>
-    <h1>Bread Money Return Calculator</h1>
+  <main class="container mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-4">Bread Money Return Calculator</h1>
+    <button id="btn-change-form" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-6">Change form</button>
     <div id="divisor" />
 
-    <section id="config-section">
-      <h1>Config:</h1>
-      <label for="bread-cost">Price p/bread</label>
-      <input type="number" min="0.01" step="0.01" required placeholder="1 bread cost..." id="bread-cost" value="0.45">
+
+    <section id="config-section" class="mb-4">
+      <label for="bread-cost" class="block">Price p/bread</label>
+      <input type="number" min="0.01" step="0.01" required placeholder="1 bread cost..." id="bread-cost" value="0.45" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-100 focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-500">
     </section>
 
-    <section id="form-section-money-to-breads">
-      <h1>Form:</h1>
-      <form id="form">
-        <label for="money">Money</label>
-        <input type="number" min="0.01" step="0.01" required placeholder="Money..." id="money">
+    <section id="form-section-money-to-breads" class="mb-4">
+      <form id="form-money-to-breads">
+        <label for="money" class="block">Money</label>
+        <input type="number" min="0.01" step="0.01" required placeholder="Money..." id="money-i-have" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-100 focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-500">
 
-        <button type="submit">Calculate</button>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Calculate</button>
       </form>
 
-      <section id="results-section">
-        <h1>Results:</h1>
-        <h2 id="how-many-breads-can-be-bought">How many breads can buy:</h2>
-        <h2 id="money-returned">Money returned:</h2>
+      <section id="results-section" class="mt-4">
+        <h1 class="text-2xl font-bold mb-2">Results:</h1>
+        <h2 id="how-many-breads-can-be-bought" class="text-xl"></h2>
+        <h2 id="money-returned" class="text-xl"></h2>
       </section>
     </section>
 
     <section class="hidden" id="form-section-breads-to-money">
-      <h1>Form:</h1>
-      <form id="form">
-        <label for="breads">Breads:</label>
-        <input type="number" min="1" step="1" required placeholder="breads..." id="breads">
-        
-        <label for="money">Money:</label>
-        <input type="number" min="0.01" step="0.01" required placeholder="money..." id="money">
+      <form id="form-breads-to-money">
+        <label for="breads" class="block">Breads:</label>
+        <input type="number" min="1" step="1" required placeholder="breads..." id="breads" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-100 focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-500">
 
-        <button type="submit">Calculate</button>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Calculate</button>
       </form>
 
-      <section id="results-section">
-        <h1>Results:</h1>
-        <h2 id="how-much-it-will-cost">How much it costs:</h2>
-        <h2 id="money-returned">Money returned:</h2>
+      <section id="results-section" class="mt-4">
+        <h1 class="text-2xl font-bold mb-2">Results:</h1>
+        <h2 id="how-much-it-will-cost" class="text-xl"></h2>
+        <h2 id="money-returned-2" class="text-xl"></h2>
       </section>
     </section>
 
   </main>
 
-  <footer>
-    &copy; Legal
-  </footer>
-
   <script src="script.js"></script>
 </body>
+
 </html>
