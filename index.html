@@ -7,6 +7,37 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <header></header>
   
+  <main>
+    <h1>Bread Money Return Calculator</h1>
+    <div id="divisor" />
+
+    <section id="config">
+      <h1>Config:</h1>
+      <label for="bread-cost">Price p/bread</label>
+      <input type="number" min="0.01" step="0.01" required placeholder="1 bread cost..." id="bread-cost">
+    </section>
+
+    <section id="form">
+      <h1>Form:</h1>
+      <form>
+        <label for="money">Money</label>
+        <input type="number" min="0.01" step="0.01" required placeholder="Money..." id="money">
+
+        <button type="submit">Calculate</button>
+      </form>
+    </section>
+
+    <section id="results">
+      <h1>Results:</h1>
+      <h2>How many breads can buy:</h2>
+      <h2>Money returned:</h2>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Legal
+  </footer>
 </body>
 </html>
